@@ -22,3 +22,14 @@
 
 # Ignore .env files as they are personal
 /.env
+
+#Ignore data
+/data
+
+#Ignore IDE files
+.buildpath
+.settings
+.project
+
+#Ignore releases files
+releases
