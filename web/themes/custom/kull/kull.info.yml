@@ -1,0 +1,14 @@
+name: Kull Theme
+type: theme
+description: Kull theme for the tv show platform websites.
+core: 8.x
+'interface translation project': kull
+'interface translation server pattern': themes/custom/kull/translations/%language.po
+libraries:
+  - kull/global-styling
+regions:
+  header: 'Header'
+  top_content: 'Top Content'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  footer: 'Footer'

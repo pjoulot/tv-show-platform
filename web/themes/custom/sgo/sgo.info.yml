@@ -1,0 +1,11 @@
+name: Stargate Origins Theme
+type: theme
+description: Stargate Origins theme for the tv show platform websites.
+core: 8.x
+base theme: kull
+regions:
+  header: 'Header'
+  top_content: 'Top Content'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  footer: 'Footer'
