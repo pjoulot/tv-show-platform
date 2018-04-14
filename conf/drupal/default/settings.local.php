@@ -4,14 +4,14 @@
 * Trusted host configuration.
 */
 $settings['trusted_host_patterns'] = array(
-  '^sgo\.lxc$',
+  '^tvshow\.lxc$',
   'localhost'
 );
 
 $databases['default']['default'] = array (
-  'database' => sgo,
-  'username' => sgo,
-  'password' => sgo,
+  'database' => tvshow,
+  'username' => tvshow,
+  'password' => tvshow,
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
