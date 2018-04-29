@@ -20,6 +20,12 @@ body {
   color: #3C3C3C;
 }
 
+/* Drupal rule for backoffice toolbar */
+.toolbar-horizontal .layout-container {
+  margin-top: 39px;
+}
+
+
 p {
   margin: 0;
 }

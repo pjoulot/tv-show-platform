@@ -1,0 +1,7 @@
+name: 'TV Show blocks'
+description: 'Module that provides blocks for tvshow websites.'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field

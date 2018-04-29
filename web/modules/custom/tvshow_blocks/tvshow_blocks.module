@@ -1,0 +1,41 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function tvshow_blocks_theme($existing, $type, $theme, $path) {
+  return array(
+    'tvshow_branding_block' => array(
+      'variables' => array(
+        'site_slogan' => '',
+        'site_url_name' => ''
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function tvshow_blocks_form_system_site_information_settings_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $site_url_name = \Drupal::config('system.site')->get('site_url_name', '');
+
+  $form['site_information']['site_url_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Website URL Name'),
+    '#description' => t('Appears in the branding block.'),
+    '#default_value' => $site_url_name,
+  );
+  $form['#submit'][] = 'tvshow_blocks_system_site_information_settings';
+}
+
+/**
+ * Handler to save the site_url_name configuration.
+ */
+function tvshow_blocks_system_site_information_settings(array $form, FormStateInterface $form_state) {
+  $website_url_name = $form_state->getValue('site_url_name', '');
+  $config = \Drupal::service('config.factory')->getEditable('system.site');
+  $config->set('site_url_name', $website_url_name)->save();
+}
