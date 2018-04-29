@@ -9,7 +9,7 @@ UPDATE_CONF=0
 
 ########## General variables ##########
 SYSTEM="Debian"
-USER="drupal"
+USER="philippe"
 GROUP=10000
 
 
@@ -31,14 +31,14 @@ fi
 
 
 ########## Project variables ##########
-PROJECT_PATH="/home/drupal/sgo"
+PROJECT_PATH="/home/philippe/tvshow"
 
 
 
 ########## Environment variables ##########
 case "$ENV" in
     dev)
-        WWW_PATH="/var/www/sgo/web"
+        WWW_PATH="/var/www/tvshow/web"
         FEATURES=0
         ALLOW_SSH=0
         UPDATE_CONF=0

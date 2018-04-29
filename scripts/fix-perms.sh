@@ -6,10 +6,8 @@ ENV=dev
 
 # Set permissions for all project.
 chown -R $USER:$GROUP $PROJECT_PATH
-chmod -R 644 $PROJECT_PATH/src
-chmod -R +X $PROJECT_PATH/src
-chmod -R 644 $PROJECT_PATH/conf
-chmod -R +X $PROJECT_PATH/conf
+chmod -R 644 $PROJECT_PATH/
+chmod -R +X $PROJECT_PATH/
 
 # Set permissions for settings.
 if [ -d "$PROJECT_PATH/conf/drupal" ]
@@ -24,11 +22,11 @@ chmod +x $PROJECT_PATH/scripts/*
 # chmod +x $PROJECT_PATH/conf/solr/*
 
 # Set permissions for media.
-if [ -d "$PROJECT_PATH/data/files" ]
+if [ -d "$PROJECT_PATH/sites/default/files" ]
 then
-    chown -R $USER:$APACHE_USER $PROJECT_PATH/data/files
-    chmod -R 660 $PROJECT_PATH/data/files
-    chmod -R +X $PROJECT_PATH/data/files
+    chown -R $USER:$APACHE_USER $PROJECT_PATH/sites/default/files
+    chmod -R 660 $PROJECT_PATH/sites/default/files
+    chmod -R +X $PROJECT_PATH/sites/default/files
 fi
 
 # Set permissions for www.
