@@ -1,0 +1,8 @@
+<?php
+
+/*
+ * Implements template_preprocess_html().
+ */
+ function sgo_preprocess_html(&$variables) {
+   $variables['attributes']['class'][] = 'stargate-origins';
+ }

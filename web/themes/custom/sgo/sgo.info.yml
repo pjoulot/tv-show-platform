@@ -3,6 +3,9 @@ type: theme
 description: Stargate Origins theme for the tv show platform websites.
 core: 8.x
 base theme: kull
+logo:
+  path: 'themes/sgo/logo.png'
+  use_default: false
 libraries:
   - kull/global-styling
 regions:
