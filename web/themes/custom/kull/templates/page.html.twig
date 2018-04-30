@@ -61,15 +61,16 @@
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-content">
-      {{ page.content }}
+    <div class="main-content-zone">
+      <div class="main-container inner-content">
+        {{ page.content }}
+        {% if page.sidebar_first %}
+          <aside class="right-column">
+            {{ page.sidebar_first }}
+          </aside>
+        {% endif %}
+      </div>
     </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
 
     {% if page.sidebar_second %}
       <aside class="layout-sidebar-second">
