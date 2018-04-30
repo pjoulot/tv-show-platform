@@ -281,6 +281,9 @@ h1 {
   color: #FFF;
   padding: 20px;
   position: relative;
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 .block-right--top-part::after {
