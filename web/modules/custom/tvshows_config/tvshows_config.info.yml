@@ -10,3 +10,4 @@ dependencies:
   - taxonomy
   - text
   - user
+  - views
