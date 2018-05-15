@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: news_teaser
+label: 'Teaser News (320 x 220)'
+effects:
+  4a3d9380-63e4-442e-84a5-9c7ccc20f5a6:
+    uuid: 4a3d9380-63e4-442e-84a5-9c7ccc20f5a6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 320
+      height: 220

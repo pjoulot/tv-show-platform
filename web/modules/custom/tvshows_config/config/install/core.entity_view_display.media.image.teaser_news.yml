@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.teaser_news
+    - field.field.media.image.field_media_image
+    - image.style.news_teaser
+    - media.type.image
+  module:
+    - image
+id: media.image.teaser_news
+targetEntityType: media
+bundle: image
+mode: teaser_news
+content:
+  field_media_image:
+    label: hidden
+    settings:
+      image_style: news_teaser
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true
