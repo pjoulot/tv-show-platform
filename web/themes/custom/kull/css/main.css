@@ -100,6 +100,35 @@ h1 {
   padding: 8px;
 }
 
+/** News **/
+
+.news-publish-infos {
+  padding: 20px 0;
+  color: #666;
+}
+
+.news-tags {
+  padding: 20px 0;
+}
+
+.news-tag {
+  display: inline-block;
+}
+
+.news-tag a {
+  display: block;
+  padding: 10px 20px;
+  background-color: #cccccc;
+  transition: 0.3s;
+  font-size: 90%;
+}
+
+.news-tag a:hover {
+  text-decoration: none;
+  background-color: #00aaff;
+  color: #FFF;
+}
+
 /** Header **/
 
 .header {
