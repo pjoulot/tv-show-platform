@@ -44,6 +44,64 @@ h1 {
   padding: 20px 0 20px 0;
 }
 
+/** General styles **/
+
+.button, a.button {
+  background-color: #111820;
+  color: #FFF;
+  padding: 10px 20px;
+  border-radius: 21px;
+  height: 42px;
+  transition: 0.3s;
+  border: none;
+}
+
+.no-touch .button:hover, .button:hover {
+  background-color: #00aaff;
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/** Local tasks **/
+
+.tv-show-local-tasks ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 42px;
+}
+
+.tv-show-local-tasks ul li {
+  margin-right: 15px;
+}
+
+/** Search **/
+.search-block-form .form-item {
+  float: left;
+}
+
+.search-block-form .form-item, .search-block-form .form-actions {
+  display: inline-block;
+}
+
+.search-block-form input[type="search"] {
+  border: 1px solid #cccccc;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  padding: 10px;
+  height: 42px;
+}
+
+.search-block-form .button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 8px;
+}
+
+/** Header **/
+
 .header {
   background-position: center;
   height: 142px;
