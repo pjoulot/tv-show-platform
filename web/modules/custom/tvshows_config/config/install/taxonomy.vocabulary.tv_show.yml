@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Tv show'
+vid: tv_show
+description: 'The vocabulary used for each tv show of a franchise.'
+hierarchy: 0
+weight: 0
