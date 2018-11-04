@@ -4,6 +4,15 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.episode.body
+    - field.field.node.episode.field_audience
+    - field.field.node.episode.field_director
+    - field.field.node.episode.field_duration
+    - field.field.node.episode.field_episode_image
+    - field.field.node.episode.field_local_air_date
+    - field.field.node.episode.field_original_air_date
+    - field.field.node.episode.field_original_title
+    - field.field.node.episode.field_summary
+    - field.field.node.episode.field_written_by
     - node.type.episode
   module:
     - text
@@ -24,4 +33,15 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_audience: true
+  field_director: true
+  field_duration: true
+  field_episode_image: true
+  field_local_air_date: true
+  field_original_air_date: true
+  field_original_title: true
+  field_summary: true
+  field_written_by: true

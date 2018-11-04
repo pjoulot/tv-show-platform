@@ -81,16 +81,25 @@
   {{ title_suffix }}
 
   {% if display_submitted %}
-    <footer class="news-publish-infos">
-      <div{{ author_attributes }}>
-        {% trans %}By {{ author_name }} on {{ date }}{% endtrans %}
+    <div class="news-publish-infos-container">
+      <footer class="news-publish-infos">
+        <div class="news-additional-infos">
+          {% if content.field_news_category|render %}
+          <div class="news-category">{{ content.field_news_category }}</div> |
+          {% endif %}
+          <div class="news-date">{{ date }}</div>
+        </div>
         {{ metadata }}
-      </div>
-    </footer>
+        <div {{ author_attributes }} class="news-author-infos">
+          <div class="news-author-name">{{ author_name }}</div>
+          <div class="news-author-picture">{{ author_picture }}</div>
+        </div>
+      </footer>
+    </div>
   {% endif %}
 
   <div{{ content_attributes }}>
-    {{ content }}
+    {{ content|without('field_news_category') }}
   </div>
 
 </article>

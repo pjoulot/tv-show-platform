@@ -73,7 +73,10 @@
 <div {{ attributes.addClass('news-teaser') }}>
   {% if display_submitted %}
     <div class="news-teaser--date">
-      <span>{{ date }}</span>
+      <span>
+        {% set createdDate = node.getCreatedTime|format_date('short') %}
+        {{ createdDate }}
+      </span>
     </div>
   {% endif %}
   {% if content.field_news_image|render %}
