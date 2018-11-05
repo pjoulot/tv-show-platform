@@ -2,6 +2,7 @@ name: tvshows_config
 type: module
 core: 8.x
 dependencies:
+  - block
   - comment
   - datetime
   - field
@@ -15,6 +16,7 @@ dependencies:
   - path
   - pathauto
   - rdf
+  - system
   - taxonomy
   - text
   - user

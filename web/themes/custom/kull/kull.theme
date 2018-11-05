@@ -31,4 +31,23 @@ function kull_theme_suggestions_form_alter(array &$suggestions, array $variables
  */
 function kull_preprocess_menu_local_task(&$variables) {
   $variables['link']['#attributes']['class'][] = 'button';
- }
+}
+
+/**
+ * Implements hook_theme_suggestions_user_alter().
+ */
+function kull_theme_suggestions_user_alter(&$suggestions, $vars, $hook) {
+  $mode = $vars['elements']['#view_mode'];
+  $suggestions[] = 'user__' . $mode;
+}
+
+/**
+ * Implements template_preprocess_views_view().
+ */
+function kull_preprocess_views_view(&$variables) {
+  $news_views = ['taxonomy_term', 'frontpage', 'news'];
+  $views_id = $variables['view']->id();
+  if (in_array($views_id, $news_views)) {
+    $variables['attributes']['class'][] = 'news-list';
+  }
+}

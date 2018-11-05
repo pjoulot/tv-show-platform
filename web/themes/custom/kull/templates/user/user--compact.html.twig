@@ -16,11 +16,8 @@
  * @see template_preprocess_user()
  */
 #}
-<div{{ attributes.addClass('user-profile') }}>
+<div{{ attributes }}>
   {% if content %}
-    <div class="user-image-profile">
-      {{ content.user_picture }}
-    </div>
-    {{- content|without('user_picture') -}}
+    {{- content -}}
   {% endif %}
 </div>

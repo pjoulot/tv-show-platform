@@ -171,6 +171,12 @@ h1 {
   height: auto;
 }
 
+.news-tags-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
 .news-tags {
   padding: 20px 0;
 }
@@ -191,6 +197,12 @@ h1 {
   text-decoration: none;
   background-color: #00aaff;
   color: #FFF;
+}
+
+@media only screen and (max-width: 699px) {
+  .news-publish-infos-container {
+    font-size: 0.7em;
+  }
 }
 
 /** Header **/
@@ -656,7 +668,7 @@ h1 {
   }
   
   .main-content {
-    padding: 0;
+    padding: 0 10px 0 10px;
   }
 }
 
@@ -742,6 +754,7 @@ h1 {
 .breadcrumb {
   padding: 15px 0 15px 0;
   color: #666;
+  font-size: 0.9em;
 }
 
 .breadcrumb ol {
@@ -763,4 +776,13 @@ h1 {
 .breadcrumb li:first-child::before {
   content: "";
   padding: 0;
+}
+
+.user-profile {
+  min-height: 220px;
+}
+
+.user-image-profile {
+  float: right;
+  margin: 0 0 15px 15px;
 }
