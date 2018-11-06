@@ -827,6 +827,11 @@ h1 {
   color: white;
 }
 
+.feed-links {
+  text-align: right;
+  margin: 10px 0;
+}
+
 @media only screen and (max-width: 699px) {
   .breadcrumb, .page-title-block, .field-body-full {
     padding-left: 10px;
