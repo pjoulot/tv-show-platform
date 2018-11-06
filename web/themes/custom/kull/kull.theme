@@ -48,6 +48,6 @@ function kull_preprocess_views_view(&$variables) {
   $news_views = ['taxonomy_term', 'frontpage', 'news'];
   $views_id = $variables['view']->id();
   if (in_array($views_id, $news_views)) {
-    $variables['attributes']['class'][] = 'news-list';
+    $variables['rows_class'] = 'news-list';
   }
 }
