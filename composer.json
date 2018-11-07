@@ -55,6 +55,7 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "colorbutton": "4.6",
+        "drupal/admin_toolbar": "1.24",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/console": "^1.0.2",
         "drupal/core": "8.6.2",
