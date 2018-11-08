@@ -20,7 +20,10 @@
   {% if content %}
     <div class="user-image-profile">
       {{ content.user_picture }}
+      <div class="user-social-links">
+        {{ content.field_social_links }}
+      </div>
     </div>
-    {{- content|without('user_picture') -}}
+    {{- content|without('user_picture', 'field_social_links') -}}
   {% endif %}
 </div>

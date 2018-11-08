@@ -1,0 +1,5 @@
+services:
+  tvshows_config.route_subscriber:
+    class: Drupal\tvshows_config\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

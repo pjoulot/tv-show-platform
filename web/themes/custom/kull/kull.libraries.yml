@@ -3,6 +3,7 @@ global-styling:
   css:
     theme:
       css/main.css: {}
+      css/allfontawesome.min.css: {}
   js:
     js/main.js: {}
   dependencies:

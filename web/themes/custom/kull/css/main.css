@@ -785,12 +785,35 @@ h1 {
 }
 
 .user-profile {
-  min-height: 220px;
+  min-height: 260px;
 }
 
 .user-image-profile {
   float: right;
   margin: 0 0 15px 15px;
+}
+.user-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-social-links a {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111820;
+  border-radius: 50%;
+  color: white;
+  margin: 0 2px;
+}
+
+.user-social-links a:hover {
+  color: white;
+  background-color: #00aaff;
+  text-decoration: none;
 }
 
 .pager {
