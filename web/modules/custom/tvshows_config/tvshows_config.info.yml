@@ -19,5 +19,6 @@ dependencies:
   - system
   - taxonomy
   - text
+  - tvshows_config
   - user
   - views

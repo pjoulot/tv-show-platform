@@ -9,8 +9,8 @@ dependencies:
     - image.style.medium
   module:
     - image
-    - link
     - text
+    - tvshows_config
     - user
 id: user.user.default
 targetEntityType: user
@@ -21,13 +21,13 @@ content:
     weight: 2
     label: hidden
     settings:
-      trim_length: 80
+      trim_length: '80'
+      rel: nofollow
+      target: _blank
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
     third_party_settings: {  }
-    type: link
+    type: social_media_link
     region: content
   field_user_description:
     weight: 1
