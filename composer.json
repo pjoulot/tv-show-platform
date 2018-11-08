@@ -58,7 +58,7 @@
         "drupal/admin_toolbar": "1.24",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/console": "^1.0.2",
-        "drupal/core": "8.6.2",
+        "drupal/core": "8.6.3",
         "drupal/ckeditor_font": "1.0",
         "drupal/colorbutton": "1.1",
         "drupal/copyright_block": "1.0-rc2",
