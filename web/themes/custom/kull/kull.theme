@@ -51,11 +51,3 @@ function kull_preprocess_views_view(&$variables) {
     $variables['rows_class'] = 'news-list';
   }
 }
-
-function kull_preprocess_html(&$variables) {
-//   $current_path = \Drupal::service('path.current')->getPath();
-//   $url_object = \Drupal::service('path.validator')->getUrlIfValid($current_path);
-//   $route_name = $url_object->getRouteName();
-//   kint($route_name);
-//   die();
-}
