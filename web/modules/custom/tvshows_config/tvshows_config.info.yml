@@ -4,6 +4,7 @@ core: 8.x
 dependencies:
   - block
   - comment
+  - ctools
   - datetime
   - field
   - file
@@ -15,6 +16,7 @@ dependencies:
   - node
   - path
   - pathauto
+  - rabbit_hole
   - rdf
   - system
   - taxonomy

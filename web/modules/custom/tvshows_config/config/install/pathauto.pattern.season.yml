@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: season
+label: Season
+type: 'canonical_entities:taxonomy_term'
+pattern: '/saison/[term:name]'
+selection_criteria:
+  0946bbd0-e293-4584-a2ad-3cdb10f63ae4:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      season: season
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 0946bbd0-e293-4584-a2ad-3cdb10f63ae4
+selection_logic: and
+weight: -5
+relationships: {  }
