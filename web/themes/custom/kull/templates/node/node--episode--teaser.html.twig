@@ -77,7 +77,7 @@
   <div class="list-item-content">
     {{ title_prefix }}
     {% if not page %}
-      <div {{ title_attributes.addClass('list-item-title"') }}><a href="{{ url }}">{{ label|render|striptags|raw }}</a></div>
+      <div {{ title_attributes.addClass('list-item-title') }}><a href="{{ url }}">{{ label|render|striptags|raw }}</a></div>
     {% endif %}
     {{ title_suffix }}
     <div class="list-item-info-bold">
