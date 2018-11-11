@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: tv_show_date_and_time
+label: 'Tv Show Date and Time'
+locked: false
+pattern: 'd/m/Y - H:i'

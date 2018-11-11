@@ -74,7 +74,7 @@
   {% if display_submitted %}
     <div class="news-teaser--date">
       <span>
-        {% set createdDate = node.getCreatedTime|format_date('short') %}
+        {% set createdDate = node.getCreatedTime|format_date('tv_show_date_and_time') %}
         {{ createdDate }}
       </span>
     </div>

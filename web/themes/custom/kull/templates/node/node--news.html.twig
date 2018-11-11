@@ -87,7 +87,8 @@
           {% if content.field_news_category|render %}
           <div class="news-category">{{ content.field_news_category }}</div> |
           {% endif %}
-          <div class="news-date">{{ date }}</div>
+          {% set createdDate = node.getCreatedTime|format_date('tv_show_date_and_time') %}
+          <div class="news-date">{{ createdDate }}</div>
         </div>
         {{ metadata }}
         <div {{ author_attributes }} class="news-author-infos">
