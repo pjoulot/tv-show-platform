@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.season.field_number
     - field.field.taxonomy_term.season.field_season_description
     - field.field.taxonomy_term.season.field_season_image
     - field.field.taxonomy_term.season.field_season_tv_show
@@ -20,6 +21,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_number:
+    weight: 4
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
   field_season_description:
     weight: 2
     label: above

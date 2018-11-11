@@ -82,7 +82,13 @@
 
   <div{{ content_attributes }}>
     <div class="episode-main-infos">
-      {{ content.field_episode_image }}
+      <div class="episode-image-container">
+        {% set show_short_name=node.field_season.entity.field_season_tv_show.entity.field_show_short_name.value %}
+        {% set season_number=node.field_season.entity.field_number.value %}
+        {% set episode_number=node.field_episode_number.value %}
+        <div class="episode-show-season-info">{{ show_short_name }} - {{ "SEASON"|t }} {{ season_number }} - {{ season_number }}{{ episode_number }}</div>
+        {{ content.field_episode_image }}
+      </div>
       <div class="episode-infos-container">
         {{ content.field_original_title }}
         {{ content.field_director }}

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_show_short_name
+    - taxonomy.vocabulary.tv_show
+id: taxonomy_term.tv_show.field_show_short_name
+field_name: field_show_short_name
+entity_type: taxonomy_term
+bundle: tv_show
+label: 'Short name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

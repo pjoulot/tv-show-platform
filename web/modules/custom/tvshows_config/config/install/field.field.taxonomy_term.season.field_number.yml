@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_number
+    - taxonomy.vocabulary.season
+id: taxonomy_term.season.field_number
+field_name: field_number
+entity_type: taxonomy_term
+bundle: season
+label: Number
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

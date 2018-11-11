@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: episode
+label: Episode
+type: 'canonical_entities:node'
+pattern: '/[node:field_season:entity:field_season_tv_show:entity:field_alias_name:value]/s[node:field_season:entity:field_number:value]/[node:title]'
+selection_criteria:
+  f860b462-f0ef-4be8-8553-5ab4dd7e5395:
+    id: node_type
+    bundles:
+      episode: episode
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f860b462-f0ef-4be8-8553-5ab4dd7e5395
+selection_logic: and
+weight: -5
+relationships: {  }
