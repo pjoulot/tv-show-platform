@@ -70,35 +70,24 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes }}>
-
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  <div{{ content_attributes }}>
-    <div class="episode-main-infos">
-      <div class="episode-image-container">
-        {% set show_short_name=node.field_season.entity.field_season_tv_show.entity.field_show_short_name.value %}
-        {% set season_number=node.field_season.entity.field_number.value %}
-        <div class="episode-show-season-info">{{ show_short_name }} - {{ "SEASON"|t }} {{ season_number }} - {{ season_episode_number }}</div>
-        {{ content.field_episode_image }}
-      </div>
-      <div class="episode-infos-container">
-        {{ content.field_original_title }}
-        {{ content.field_director }}
-        {{ content.field_written_by }}
-        {{ content.field_original_air_date }}
-        {{ content.field_local_air_date }}
-        {{ content.field_duration }}
-      </div>
-    </div>
-  
-    {{ content|without('field_episode_image', 'field_original_title', 'field_director', 'field_written_by', 'field_original_air_date', 'field_local_air_date', 'field_duration') }}
+<div{{ attributes.addClass('default-list-item') }}>
+  <div class="list-item-image">
+    <a href="{{ url }}">{{ content.field_episode_image }}</a>
   </div>
-
-</article>
+  <div class="list-item-content">
+    {{ title_prefix }}
+    {% if not page %}
+      <div {{ title_attributes.addClass('list-item-title"') }}><a href="{{ url }}">{{ label|render|striptags|raw }}</a></div>
+    {% endif %}
+    {{ title_suffix }}
+    <div class="list-item-info-bold">
+      <span>{{ "Episode"|t }}: #{{ season_episode_number }}</span>
+      {% if content.field_original_air_date|render %}
+      <span>{{ "Air date"|t }}: {{ content.field_original_air_date|render|striptags('time')|raw }}</span>
+      {% endif %}
+    </div>
+    <div class="list-item-description">
+      {{ content.body }}
+    </div>
+  </div>
+</div>

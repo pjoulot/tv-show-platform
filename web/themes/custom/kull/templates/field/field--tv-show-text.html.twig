@@ -51,12 +51,12 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass('field-body-full') }}>{{ item.content }}</div>
+      <div{{ attributes }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
-  <div{{ attributes }}>
-    <h2{{ title_attributes.addClass(title_classes) }}>{{ label }}</h2>
+  <div{{ attributes.addClass(container_classes) }}>
+    <h2{{ title_attributes.addClass(title_classes) }}>{{ label }}:</h2>
     {% if multiple %}
       <div>
     {% endif %}

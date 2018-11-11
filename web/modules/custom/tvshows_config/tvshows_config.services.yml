@@ -3,3 +3,9 @@ services:
     class: Drupal\tvshows_config\Routing\RouteSubscriber
     tags:
       - { name: event_subscriber }
+  tvshows_config.season_helper:
+    class: Drupal\tvshows_config\Services\SeasonHelper
+    arguments: ["@entity_type.manager"]
+  tvshows_config.episode_helper:
+    class: Drupal\tvshows_config\Services\EpisodeHelper
+    arguments: []

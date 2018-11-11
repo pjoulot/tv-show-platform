@@ -8,13 +8,16 @@ dependencies:
     - field.field.node.episode.field_director
     - field.field.node.episode.field_duration
     - field.field.node.episode.field_episode_image
+    - field.field.node.episode.field_episode_number
     - field.field.node.episode.field_local_air_date
     - field.field.node.episode.field_original_air_date
     - field.field.node.episode.field_original_title
+    - field.field.node.episode.field_season
     - field.field.node.episode.field_summary
     - field.field.node.episode.field_written_by
     - node.type.episode
   module:
+    - datetime
     - text
     - user
 id: node.episode.teaser
@@ -25,13 +28,31 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 1
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_episode_image:
+    type: entity_reference_entity_view
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      view_mode: default_list_item
+      link: false
+    third_party_settings: {  }
+  field_original_air_date:
+    type: datetime_default
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: tv_show_default
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -39,9 +60,9 @@ hidden:
   field_audience: true
   field_director: true
   field_duration: true
-  field_episode_image: true
+  field_episode_number: true
   field_local_air_date: true
-  field_original_air_date: true
   field_original_title: true
+  field_season: true
   field_summary: true
   field_written_by: true

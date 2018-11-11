@@ -16,7 +16,6 @@ dependencies:
     - field.field.node.episode.field_written_by
     - node.type.episode
   module:
-    - text
     - tvshows_config
     - user
 id: node.episode.default
@@ -26,7 +25,7 @@ mode: default
 content:
   body:
     label: above
-    type: text_default
+    type: tv_show_text
     weight: 9
     settings: {  }
     third_party_settings: {  }
@@ -68,8 +67,8 @@ content:
     weight: 8
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: tv_show_default
     third_party_settings: {  }
     type: info_datetime
     region: content
@@ -77,8 +76,8 @@ content:
     weight: 7
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: tv_show_default
     third_party_settings: {  }
     type: info_datetime
     region: content
@@ -95,7 +94,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    type: tv_show_text
     region: content
   field_written_by:
     weight: 4

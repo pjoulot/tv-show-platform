@@ -2,16 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.taxonomy_term.teaser
     - field.field.taxonomy_term.season.field_number
     - field.field.taxonomy_term.season.field_season_image
     - field.field.taxonomy_term.season.field_season_tv_show
     - taxonomy.vocabulary.season
   module:
     - text
-id: taxonomy_term.season.default
+id: taxonomy_term.season.teaser
 targetEntityType: taxonomy_term
 bundle: season
-mode: default
+mode: teaser
 content:
   description:
     label: hidden
@@ -34,7 +35,7 @@ content:
     weight: 3
     label: hidden
     settings:
-      view_mode: default
+      view_mode: default_list_item
       link: false
     third_party_settings: {  }
     region: content

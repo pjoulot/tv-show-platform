@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.default_list_item
+label: 'Default List item'
+targetEntityType: media
+cache: true

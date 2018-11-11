@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8898dda6a405986cb7e6b36c2248b18d",
+    "content-hash": "e14c71c67f4d1bce1ac9c88ea47a7f42",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2245,6 +2245,9 @@
                     "recurse": false,
                     "replace": false,
                     "merge-extra": false
+                },
+                "patches_applied": {
+                    "Cannot use relationship for rendered entity on Views": "https://www.drupal.org/files/issues/2018-08-22/2457999-183.patch"
                 }
             },
             "autoload": {

@@ -485,6 +485,56 @@ h1 {
   }
 }
 
+/** Season **/
+
+.default-list-item {
+  display: flex;
+}
+
+.default-list-item {
+  border-top: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  padding: 12px 12px 12px 12px;
+}
+
+.views-row:last-child .default-list-item {
+  border-bottom: 1px solid #cccccc;
+}
+
+.views-row:nth-child(2n) .default-list-item {
+  background-color: #f1f1f1;
+}
+
+.list-item-title {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.list-item-image {
+ margin-right: 12px;
+}
+
+.list-item-image img {
+  vertical-align: middle;
+  border: solid 1px #111820;
+}
+
+.list-item-info-bold {
+  font-weight: bold;
+  font-size: 0.7em;
+  margin-top: 5px;
+}
+
+.list-item-info-bold span+span {
+  margin-left: 20px;
+}
+
+.list-item-description {
+  font-size: 0.8em;
+    margin-top: 10px;
+}
+
 /** Right part **/
 
 .margin-bottom-right-element {

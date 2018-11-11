@@ -16,3 +16,26 @@ function tvshows_config_page_attachments_alter(array &$attachments) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_taxonomy_term().
+ */
+function tvshows_config_preprocess_taxonomy_term__season(&$variables) {
+  $term = $variables['term'];
+
+  $season_helper = \Drupal::service('tvshows_config.season_helper');
+  $variables['url'] = $season_helper->getSeasonPageUrl($term);
+
+  $variables['years_range'] = $season_helper->getYearsRange($term);
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function tvshows_config_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  if (in_array($node->bundle(), ['episode'])) {
+    $episode_helper= \Drupal::service('tvshows_config.episode_helper');
+    $variables['season_episode_number'] = $episode_helper->getSeasonEpisodeNumber($node);
+  }
+}

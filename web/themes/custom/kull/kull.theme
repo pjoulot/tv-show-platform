@@ -43,6 +43,15 @@ function kull_theme_suggestions_user_alter(&$suggestions, $vars, $hook) {
 }
 
 /**
+ * Implements hook_theme_suggestions_taxonomy_term_alter().
+ */
+function kull_theme_suggestions_taxonomy_term_alter(&$suggestions, $vars, $hook) {
+  $mode = $vars['elements']['#view_mode'];
+  $vocabulary = $vars['elements']['#taxonomy_term']->bundle();
+  $suggestions[] = 'taxonomy_term__' . $vocabulary. '__' . $mode;
+}
+
+/**
  * Implements template_preprocess_views_view().
  */
 function kull_preprocess_views_view(&$variables) {

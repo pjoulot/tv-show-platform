@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: default_list_item_desktop
+label: 'Default list Item Desktop'
+effects:
+  8fc810cc-bd72-496d-887c-556c7c628de4:
+    uuid: 8fc810cc-bd72-496d-887c-556c7c628de4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 120
+      anchor: center-center
