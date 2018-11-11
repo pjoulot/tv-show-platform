@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: episode_desktop
+label: 'Episode Desktop'
+effects:
+  489f5354-7813-497e-8d22-b89d65f83746:
+    uuid: 489f5354-7813-497e-8d22-b89d65f83746
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 658
+      height: 314
+      anchor: center-center

@@ -2,22 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.episode
     - field.field.media.image.field_media_image
     - media.type.image
+    - responsive_image.styles.episode_full
   module:
-    - image
-id: media.image.default
+    - responsive_image
+id: media.image.episode
 targetEntityType: media
 bundle: image
-mode: default
+mode: episode
 content:
   field_media_image:
     label: visually_hidden
     settings:
-      image_style: ''
+      responsive_image_style: episode_full
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
     weight: 1
     region: content
 hidden:

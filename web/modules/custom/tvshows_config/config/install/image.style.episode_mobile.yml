@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: episode_mobile
+label: 'Episode mobile'
+effects:
+  fc22be4d-7e81-4734-8cd5-b584c76e0692:
+    uuid: fc22be4d-7e81-4734-8cd5-b584c76e0692
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 238
+      anchor: center-center

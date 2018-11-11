@@ -434,6 +434,45 @@ h1 {
   font-size: 14px;
 }
 
+/** Episode **/
+
+.info-label {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.info-value {
+  margin-left: 5px;
+}
+
+.episode-infos-container {
+  padding: 20px;
+}
+
+.episode-main-infos {
+  border: solid 1px #3C3C3C;
+}
+
+.episode-main-infos img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-bottom: solid 1px #3C3C3C;
+}
+
+.episode-infos-container {
+  background-color: #e7e7e7;
+}
+
+@media only screen and (max-width: 699px) {
+  .episode-main-infos {
+    border-left: 0;
+    border-right: 0;
+    border-top: solid 1px #3C3C3C;
+    border-bottom: solid 1px #3C3C3C;
+  }
+}
+
 /** Right part **/
 
 .margin-bottom-right-element {

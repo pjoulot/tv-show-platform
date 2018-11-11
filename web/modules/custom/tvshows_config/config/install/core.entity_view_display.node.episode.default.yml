@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.episode.field_director
     - field.field.node.episode.field_duration
     - field.field.node.episode.field_episode_image
+    - field.field.node.episode.field_episode_number
     - field.field.node.episode.field_local_air_date
     - field.field.node.episode.field_original_air_date
     - field.field.node.episode.field_original_title
@@ -14,8 +15,8 @@ dependencies:
     - field.field.node.episode.field_written_by
     - node.type.episode
   module:
-    - datetime
     - text
+    - tvshows_config
     - user
 id: node.episode.default
 targetEntityType: node
@@ -25,86 +26,95 @@ content:
   body:
     label: above
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_audience:
-    weight: 110
+    weight: 6
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    type: info_text
     region: content
   field_director:
-    weight: 103
+    weight: 4
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    type: info_text
     region: content
   field_duration:
-    weight: 109
+    weight: 7
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    type: info_text
     region: content
   field_episode_image:
     type: entity_reference_entity_view
-    weight: 107
+    weight: 1
     label: hidden
     settings:
-      view_mode: default
+      view_mode: episode
       link: false
     third_party_settings: {  }
     region: content
+  field_episode_number:
+    weight: 11
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
   field_local_air_date:
-    weight: 106
+    weight: 9
     label: above
     settings:
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
-    type: datetime_default
+    type: info_datetime
     region: content
   field_original_air_date:
-    weight: 105
+    weight: 8
     label: above
     settings:
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
-    type: datetime_default
+    type: info_datetime
     region: content
   field_original_title:
-    weight: 102
+    weight: 3
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    type: info_text
     region: content
   field_summary:
-    weight: 108
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_written_by:
-    weight: 104
+    weight: 5
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    type: info_text
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

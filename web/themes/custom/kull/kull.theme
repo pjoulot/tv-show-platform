@@ -16,6 +16,7 @@ function kull_theme_suggestions_block_alter(array &$suggestions, array $variable
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function kull_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'field__' . $variables['element']['#formatter'];
   $suggestions[] = 'field__' . $variables['element']['#field_name'] . '__' . $variables['element']['#view_mode'];
 }
 

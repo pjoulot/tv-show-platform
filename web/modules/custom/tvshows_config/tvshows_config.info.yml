@@ -18,6 +18,7 @@ dependencies:
   - pathauto
   - rabbit_hole
   - rdf
+  - responsive_image
   - system
   - taxonomy
   - text

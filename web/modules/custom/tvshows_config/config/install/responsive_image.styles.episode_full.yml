@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.episode_desktop
+    - image.style.episode_mobile
+  theme:
+    - kull
+id: episode_full
+label: 'Episode full'
+image_style_mappings:
+  -
+    breakpoint_id: kull.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: episode_desktop
+  -
+    breakpoint_id: kull.narrow
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: episode_desktop
+  -
+    breakpoint_id: kull.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: episode_mobile
+breakpoint_group: kull
+fallback_image_style: '_original image_'
