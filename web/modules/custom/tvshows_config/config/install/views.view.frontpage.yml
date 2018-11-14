@@ -318,6 +318,10 @@ display:
           relationship: none
           view_mode: rss
       display_extenders: {  }
+      title: News
+      defaults:
+        title: false
+        sitename_title: false
     cache_metadata:
       contexts:
         - 'languages:language_interface'

@@ -43,8 +43,8 @@ class TaxonomyNewsTagFormatter extends EntityReferenceLabelFormatter {
 
             // @todo Create a service in order to get the term name URI compliant.
             $term_name = Html::getId(strtolower($entity->getName()));
-            $path = '/news/tag/' . $term_name;
-            $uri = Url::fromInternalUri($path, $options = []);
+            $uri= Url::fromRoute('view.taxonomy_term.page_1');
+            $uri->setRouteParameter('arg_0', $term_name);
           }
           catch (UndefinedLinkTemplateException $e) {
             // This exception is thrown by \Drupal\Core\Entity\Entity::urlInfo()

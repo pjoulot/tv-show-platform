@@ -9,6 +9,7 @@ dependencies:
     - node.type.news
   module:
     - text
+    - tvshows_config
     - user
 id: node.news.default
 targetEntityType: node
@@ -36,7 +37,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    type: news_tag_link
     region: content
   links:
     weight: 0
