@@ -3,8 +3,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_meta_tags
     - node.type.page
   module:
+    - metatag
     - path
     - text
 id: node.page.default
@@ -27,6 +29,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_meta_tags:
+    weight: 121
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   path:
     type: path
     weight: 30
@@ -71,4 +79,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden: {  }

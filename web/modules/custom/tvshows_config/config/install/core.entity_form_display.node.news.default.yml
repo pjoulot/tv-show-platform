@@ -3,12 +3,14 @@ status: true
 dependencies:
   config:
     - field.field.node.news.body
+    - field.field.node.news.field_meta_tags
     - field.field.node.news.field_news_category
     - field.field.node.news.field_news_image
     - field.field.node.news.field_news_tags
     - node.type.news
   module:
     - media_library
+    - metatag
     - path
     - text
 id: node.news.default
@@ -31,6 +33,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_meta_tags:
+    weight: 51
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   field_news_category:
     weight: 7
     settings: {  }
@@ -96,4 +104,9 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden: {  }

@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.episode.field_episode_image
     - field.field.node.episode.field_episode_number
     - field.field.node.episode.field_local_air_date
+    - field.field.node.episode.field_meta_tags
     - field.field.node.episode.field_original_air_date
     - field.field.node.episode.field_original_title
     - field.field.node.episode.field_season
@@ -17,6 +18,7 @@ dependencies:
     - node.type.episode
   module:
     - datetime
+    - metatag
     - path
     - text
 id: node.episode.default
@@ -84,6 +86,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_meta_tags:
+    weight: 51
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_original_air_date:
     weight: 13
@@ -165,4 +173,9 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden: {  }
