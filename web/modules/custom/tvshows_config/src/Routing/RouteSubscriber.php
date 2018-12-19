@@ -17,7 +17,8 @@ class RouteSubscriber extends RouteSubscriberBase {
     // Override title for some routes.
     $routes = [
       'entity.user.canonical' => 'userTitle',
-      'view.taxonomy_term.page_1' => 'newsViewsTitle'
+      'view.taxonomy_term.page_1' => 'arg0ViewsTitle',
+      'view.seasons_list.page_1' => 'arg0ViewsTitle',
     ];
     foreach ($routes as $route_name => $title_function) {
       $route = $collection->get($route_name);
