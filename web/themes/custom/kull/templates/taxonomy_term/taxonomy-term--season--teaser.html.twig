@@ -30,7 +30,7 @@
   <div class="list-item-content">
     {{ title_prefix }}
     {% if not page %}
-      <div class="list-item-title"><a href="{{ url }}">{{ name|render|striptags|raw }}</a></div>
+      <div class="list-item-title"><a href="{{ url }}">{{ "Season"|t }} {{ term.field_number.value }}</a></div>
     {% endif %}
     {{ title_suffix }}
     <div class="list-item-info-bold">{{ years_range }}</div>
