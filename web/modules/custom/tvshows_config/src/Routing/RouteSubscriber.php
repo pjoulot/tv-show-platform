@@ -10,17 +10,18 @@ use Symfony\Component\Routing\RouteCollection;
  */
 class RouteSubscriber extends RouteSubscriberBase {
 
+  const TITLE_ROUTES = [
+    'entity.user.canonical' => 'userTitle',
+    'view.taxonomy_term.page_1' => 'viewTitle',
+    'view.seasons_list.page_1' => 'viewTitle',
+  ];
+
   /**
    * {@inheritdoc}
    */
   protected function alterRoutes(RouteCollection $collection) {
     // Override title for some routes.
-    $routes = [
-      'entity.user.canonical' => 'userTitle',
-      'view.taxonomy_term.page_1' => 'arg0ViewsTitle',
-      'view.seasons_list.page_1' => 'arg0ViewsTitle',
-    ];
-    foreach ($routes as $route_name => $title_function) {
+    foreach (self::TITLE_ROUTES as $route_name => $title_function) {
       $route = $collection->get($route_name);
       $this->setRouteTitle($route, $title_function);
     }

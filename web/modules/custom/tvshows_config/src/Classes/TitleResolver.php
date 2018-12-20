@@ -58,7 +58,7 @@ class TitleResolver implements ContainerInjectionInterface {
    *   The view title as a renderable array.
    *   NULL.
    */
-  public function arg0ViewsTitle() {
+  public function viewTitle() {
     return $this->viewHelper->getViewTitle();
   }
 
