@@ -9,6 +9,7 @@ use Drupal\Component\Utility\Xss;
  * Class ViewHelper.
  */
 class ViewHelper {
+  use \Drupal\Core\StringTranslation\StringTranslationTrait;
 
   /**
    * The taxonomy helper service.
@@ -138,8 +139,7 @@ class ViewHelper {
       $filtered_bundles = $this->getTaxonomyBundles($view);
       $term = $this->taxonomyHelper->getTaxonomyTermByName($arg_0, $filtered_bundles, $this->getTermNameField($view));
       if (!empty($term)) {
-        // @todo Use a dependency injection to use the translation service.
-        $title = t($title_pattern, array('@term_name' => $term->getName()));
+        $title = $this->t($title_pattern, array('@term_name' => $term->getName()));
       }
       else {
         $title = $view->getTitle();

@@ -22,7 +22,6 @@ class TaxonomyHelper {
    *   The found term object or NULL if nothing is found.
    */
   public function getTaxonomyTermByName($name, $vids = [], $field = '') {
-    // @todo Move this function inside a separated service.
     $found_term = NULL;
 
     $query = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->getQuery();
