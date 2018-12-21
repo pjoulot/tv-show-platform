@@ -15,3 +15,6 @@ services:
   tvshows_config.view_helper:
     class: Drupal\tvshows_config\Services\ViewHelper
     arguments: ["@tvshows_config.taxonomy_helper"]
+  tvshows_config.user_helper:
+    class: Drupal\tvshows_config\Services\UserHelper
+    arguments: []

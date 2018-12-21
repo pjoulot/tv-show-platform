@@ -128,7 +128,7 @@ class ViewHelper {
    *   The view title as a renderable array.
    *   NULL.
    */
-  public function getViewTitle() {
+  public function getTitle() {
     $title = NULL;
     $view = $this->getCurrentViewObject(['arg_0']);
     if (!empty($view)) {

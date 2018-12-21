@@ -7,6 +7,7 @@ use Drupal\user\UserInterface;
 use Drupal\tvshows_config\Services\ViewHelper;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
+use Drupal\tvshows_config\Services\UserHelper;
 
 /**
  * Class to override route titles.
@@ -21,10 +22,18 @@ class TitleResolver implements ContainerInjectionInterface {
   protected $viewHelper;
 
   /**
+   * The user helper service.
+   *
+   * @var \Drupal\tvshows_config\Services\UserHelper
+   */
+  protected $userHelper;
+
+  /**
    * {@inheritdoc}
    */
-  public function __construct(ViewHelper $view_helper) {
+  public function __construct(ViewHelper $view_helper, UserHelper $user_helper) {
     $this->viewHelper = $view_helper;
+    $this->userHelper= $user_helper;
   }
 
   /**
@@ -32,7 +41,8 @@ class TitleResolver implements ContainerInjectionInterface {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('tvshows_config.view_helper')
+        $container->get('tvshows_config.view_helper'),
+        $container->get('tvshows_config.user_helper')
     );
   }
 
@@ -47,8 +57,7 @@ class TitleResolver implements ContainerInjectionInterface {
    *   NULL.
    */
   public function userTitle(UserInterface $user = NULL) {
-    $user_title = ($user_name = $user->field_user_name->value) ? $user->field_user_name->value : $user->getDisplayName();
-    return $user ? ['#markup' => $user_title, '#allowed_tags' => Xss::getHtmlTagList()] : '';
+    return $this->userHelper->getTitle($user);
   }
 
   /**
@@ -59,7 +68,7 @@ class TitleResolver implements ContainerInjectionInterface {
    *   NULL.
    */
   public function viewTitle() {
-    return $this->viewHelper->getViewTitle();
+    return $this->viewHelper->getTitle();
   }
 
 }

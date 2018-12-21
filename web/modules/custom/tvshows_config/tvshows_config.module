@@ -47,10 +47,8 @@ function tvshows_config_preprocess_node(&$variables) {
  */
 function tvshows_config_preprocess_page_title(&$variables) {
   $route_name = \Drupal::routeMatch()->getRouteName();
-  $routes = [
-    'view.seasons_list.page_1' => 'getViewTitle',
-  ];
-  if (!empty($routes[$route_name])) {
-    $variables['title'] = \Drupal::service('tvshows_config.view_helper')->{$routes[$route_name]}();
+  $routes = ['view.seasons_list.page_1'];
+  if (in_array($route_name, $routes)) {
+    $variables['title'] = \Drupal::service('tvshows_config.view_helper')->getTitle();
   }
 }
