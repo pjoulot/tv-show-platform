@@ -131,7 +131,8 @@
         "patches": {
           "drupal/core": {
             "Cannot use relationship for rendered entity on Views": "https://www.drupal.org/files/issues/2018-08-22/2457999-183.patch",
-            "Breadcrumb title doesn't reflect view contextual filter's title override": "https://www.drupal.org/files/issues/2018-12-23/drupal-view_title_with_contextual_filters-2787051-28.patch"
+            "Breadcrumb title doesn't reflect view contextual filter's title override": "https://www.drupal.org/files/issues/2018-12-23/drupal-view_title_with_contextual_filters-2787051-28.patch",
+            "Expose oEmbed provider URL setting in the Media configuration form": "https://www.drupal.org/files/issues/2018-12-08/2999018-43.patch"
           }
         }
     }
