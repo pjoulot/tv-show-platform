@@ -31,14 +31,14 @@ fi
 
 
 ########## Project variables ##########
-PROJECT_PATH="/home/philippe/tvshow"
+PROJECT_PATH="/home/philippe/tvshowplatform"
 
 
 
 ########## Environment variables ##########
 case "$ENV" in
     dev)
-        WWW_PATH="/var/www/tvshow/web"
+        WWW_PATH="/var/www/tvshowplatform/web"
         FEATURES=0
         ALLOW_SSH=0
         UPDATE_CONF=0
