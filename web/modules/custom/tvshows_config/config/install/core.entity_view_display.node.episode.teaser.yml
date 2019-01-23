@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.episode.field_episode_image
     - field.field.node.episode.field_episode_number
     - field.field.node.episode.field_local_air_date
+    - field.field.node.episode.field_meta_tags
     - field.field.node.episode.field_original_air_date
     - field.field.node.episode.field_original_title
     - field.field.node.episode.field_season
@@ -62,7 +63,9 @@ hidden:
   field_duration: true
   field_episode_number: true
   field_local_air_date: true
+  field_meta_tags: true
   field_original_title: true
   field_season: true
   field_summary: true
   field_written_by: true
+  published_at: true

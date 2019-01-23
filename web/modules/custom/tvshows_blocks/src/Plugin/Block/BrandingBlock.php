@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\tvshow_blocks\Plugin\Block;
+namespace Drupal\tvshows_blocks\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Block\BlockPluginInterface;
