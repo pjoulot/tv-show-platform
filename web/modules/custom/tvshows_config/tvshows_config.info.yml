@@ -1,4 +1,6 @@
-name: tvshows_config
+name: 'Tv Shows Config'
+description: 'Module that provides the configuration for tvshow websites.'
+package: 'Tv Show'
 type: module
 core: 8.x
 dependencies:

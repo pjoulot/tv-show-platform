@@ -1,5 +1,6 @@
-name: 'TV Show blocks'
+name: 'TV Shows Blocks'
 description: 'Module that provides blocks for tvshow websites.'
+package: 'Tv Show'
 type: module
 core: 8.x
 dependencies:
