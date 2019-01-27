@@ -4,8 +4,19 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1f7c47a45e66ffb7641ac900eaec6a5",
+    "content-hash": "b2c8af1826dca33e924c754fe4218ab7",
     "packages": [
+        {
+            "name": "Aframe",
+            "version": "0.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/aframevr/aframe/archive/v0.8.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
+        },
         {
             "name": "alchemy/zippy",
             "version": "0.4.3",
@@ -1674,6 +1685,61 @@
             }
         },
         {
+            "name": "drupal/aframe",
+            "version": "1.0.0-beta4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/aframe",
+                "reference": "8.x-1.0-beta4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/aframe-8.x-1.0-beta4.zip",
+                "reference": "8.x-1.0-beta4",
+                "shasum": "b927224669f2eb065ea5e99a4b89c6fe1656b67b"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta4",
+                    "datestamp": "1518582484",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Deciphered",
+                    "homepage": "https://www.drupal.org/user/103796"
+                },
+                {
+                    "name": "eleonel",
+                    "homepage": "https://www.drupal.org/user/440810"
+                },
+                {
+                    "name": "phjou",
+                    "homepage": "https://www.drupal.org/user/3344054"
+                }
+            ],
+            "description": "Integration module with A-Frame, a framework for creating virtual reality web experiences that work across desktop, mobile, and the Oculus Rift.",
+            "homepage": "https://www.drupal.org/project/aframe",
+            "support": {
+                "source": "http://cgit.drupalcode.org/aframe"
+            }
+        },
+        {
             "name": "drupal/ckeditor_font",
             "version": "1.0.0",
             "source": {
@@ -2361,7 +2427,8 @@
                 },
                 "patches_applied": {
                     "Cannot use relationship for rendered entity on Views": "https://www.drupal.org/files/issues/2018-08-22/2457999-183.patch",
-                    "Breadcrumb title doesn't reflect view contextual filter's title override": "https://www.drupal.org/files/issues/2018-12-23/drupal-view_title_with_contextual_filters-2787051-28.patch"
+                    "Breadcrumb title doesn't reflect view contextual filter's title override": "https://www.drupal.org/files/issues/2018-12-23/drupal-view_title_with_contextual_filters-2787051-28.patch",
+                    "oEmbed implementation has a centralized approach": "https://www.drupal.org/files/issues/2019-01-27/drupal-oembed_has_a_centralized_approach-3008712-6.patch"
                 }
             },
             "autoload": {
@@ -2568,7 +2635,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/easy_breadcrumb",
-                "reference": "c97736c43a4e9c36dd80ecfc24071be1a322ea59"
+                "reference": "6d4d826de6796560df56fc52a822d21b1461df44"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2579,8 +2646,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.8+10-dev",
-                    "datestamp": "1547058180",
+                    "version": "8.x-1.8+11-dev",
+                    "datestamp": "1548066180",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2622,7 +2689,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/easy_breadcrumb"
             },
-            "time": "2019-01-21T10:20:55+00:00"
+            "time": "2019-01-23T14:46:44+00:00"
         },
         {
             "name": "drupal/features",
