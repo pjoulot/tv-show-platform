@@ -70,6 +70,7 @@
         "colorbutton": "4.6",
         "drupal/admin_toolbar": "1.25",
 	"drupal/aframe": "1.0-beta4",
+	"drupal/aframe_extra": "1.0-alpha1",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/config_update": "1.6",
         "drupal/console": "^1.0.2",
